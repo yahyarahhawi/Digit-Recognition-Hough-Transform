@@ -1,4 +1,4 @@
-# Handwritten Digit Recognition using Hough Transform and Neural Network 
+# Handwritten Digit Recognition using Hough Transform and Neural Network
 
 This project aims to recognize handwritten digits using neural networks and a low-dimensional feature vector. The project also explores clustering methods, but clustering attempts failed due to overlapping clusters.
 
@@ -8,9 +8,6 @@ This project aims to recognize handwritten digits using neural networks and a lo
 - Jupyter Notebook
 - Required Python packages:
   - kagglehub
-  - os
-  - random
-  - skimage
   - numpy
   - matplotlib
   - scikit-learn
@@ -22,7 +19,7 @@ The dataset used is a handwritten digits dataset not included in MNIST. The data
 
 ## Feature Extraction
 
-Features are extracted from the images using Hough Line and Hough Circle transforms. The extracted features are combined into a 1D array representing each digit.
+Features are extracted from the images using Hough Line and Hough Circle transforms. The Hough Line Transform is used to detect lines in an image, while the Hough Circle Transform is used to detect circles. You can read more about these techniques [here](https://en.wikipedia.org/wiki/Hough_transform). The extracted features are combined into a 1D array representing each digit.
 
 ## Clustering
 
@@ -30,8 +27,7 @@ Clustering methods such as DBSCAN and K-Means were attempted to group similar di
 
 ## Neural Network
 
-A simple neural network is implemented using PyTorch to classify the digits. The network consists of two fully connected layers with ReLU activation. The model is trained on the extracted features and evaluated on a validation set.
-
+A simple neural network is implemented using PyTorch to classify the digits. The network consists of two fully connected layers: the first layer has 128 neurons, and the second layer has 64 neurons, both with ReLU activation. The model is trained using the Adam optimizer on the extracted features and evaluated on a validation set.
 
 ## Results
 
